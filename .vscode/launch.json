@@ -15,7 +15,7 @@
             "type": "java",
             "name": "Launch Spring",
             "request": "launch",
-            "mainClass": "server.ServingWebContentApplication"
+            "mainClass": "service.WebServer"
         }
     ]
 }
