@@ -21,7 +21,7 @@ Here are the steps to getting started via command line or terminal:
 
 2. Run gradlew build to compile the application. (On Windows `.\gradlew build`, on Mac `./gradlew build`)
 
-3. Run graldew bootRun to run the server (Windows `.\graldew bootRun`, Mac `./gradlew bootRun`)
+3. Run graldew bootRun to run the server (Windows `.\gradlew bootRun`, Mac `./gradlew bootRun`)
 
 4. Open a browser and navigate to `http://localhost:8080/`. You should see a message that says "Get your greeting here".
 
