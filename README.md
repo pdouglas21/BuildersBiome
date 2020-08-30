@@ -39,7 +39,7 @@ Here are the steps to getting started via IntelliJ:
 
 3. Once the project loads, you can press the build button on the toolbar on the top right to compile the project, and you can press the play/debug buttons to run/debug the server.
 
-## Interacting with the Website
+## Interacting with the Server
 
 Once you run the server using either method above, you can send requests to the server and receive responses.
 The request you send will be in the form of a url (such as https://www.wikipedia.org) and the response you receive is an HTML document (plus CSS and JavaScript) that your browser parses to display the web page.
@@ -53,9 +53,13 @@ The request you send will be in the form of a url (such as https://www.wikipedia
 3. Navigate to `http://localhost:8080/hello?name=Bob`. You should see "Hello, Bob!".
    You can change Bob in the url to a different name, and it should change the displayed message.
 
+You now have the website up and running on your local computer.
+That's great because you can now develop features, make changes, and easily test them out, but the site is only visible on your computer.
+The next step is to deploy your website to the internet so everyone else can see it too.
+
 # Deploying Your App to Heroku
 
-The very first thing we will do is to deploy our website.
+The very first task we will do after getting set up is to deploy our website.
 This means anyone will be able to access the website from their computer just like they can access https://www.wikipedia.org.
 We're going deploy first so that we can follow an agile methodology.That means we start with a working product, and then we add features as we go.
 Our product is always in a "complete" state, because we'll always have a working website.
