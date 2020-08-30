@@ -35,6 +35,8 @@ Here are the steps to getting started via IntelliJ:
 2. Paste in the link to your GitHub repository. In the case of this WebServerTemplate repo, the link is https://github.com/HolyNamesAcademy/WebServerTemplate.git, but you should use the link from your forked repo. Click "Clone".
    If it asks you to chose between Gradle and Eclipse, choose Gradle.
 
+3. If you see a toast notification in the bottom right about Gradle ("IntelliJ IDEA found a Gradle build script"), select "Import Gradle project".
+
 3. Once the project loads, you can press the build button on the toolbar on the top right to compile the project, and you can press the play/debug buttons to run/debug the server.
 
 ## Interacting with the Website
