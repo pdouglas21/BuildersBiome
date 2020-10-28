@@ -1,30 +1,44 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <Link rel = stylesheet type = "text/css" href = "bbstyle.css">
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <h1 style ="font-size:60px" >Builder's Biome </h1>
-   <img src = "builder's logo.png" width = "100" height="100" >
-    <nav>
-        <ul>
-            <li>
-                <a href = "/kitchen" >Kitchen</a>
+   <div class = "header">
+           <div class = "title">
+              <img src = "builder's title.png" width = "900" height="120">
+           </div>
+   </div>
+    <div class ="container">
+        <nav class = "navbar navbar-expand-sm bg-light justify-content-center">
+            <a class = "navbar-logo" href = "/home">
+                <img src = "final bb logo (white).png" alt="logo" height = "40" width = "40">
+            </a>
+        <ul navbar class = "bg-custom">
+            <li class = "nav-item">
+                <a class = "nav-link" href = "/kitchen" >Kitchen</a>
             </li>
-            <li>
-                <a href = "/livingroom" >Living Room</a>
+            <li class = "nav-item">
+                <a class = "nav-link" href = "/livingroom" >Living Room</a>
             </li>
-            <li>
-                <a href = "/bedroom" >Bedroom</a>
+            <li class = "nav-item">
+                <a class = "nav-link" href = "/bedroom" >Bedroom</a>
             </li>
-            <li>
-                <a href = "/bathroom" >Bathroom</a>
+            <li class = "nav-item">
+                <a class = "nav-link" href = "/bathroom" >Bathroom</a>
             </li>
-            <li>
-                <a href = "/other" >Other</a>
+            <li class = "nav-item">
+                <a class = "nav-link" href = "/other" >Other</a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link" href = "/account" >Account</a>
             </li>
         </ul>
-    </nav>
+            </nav>
+
+    </div>
 </body>
 </html>
