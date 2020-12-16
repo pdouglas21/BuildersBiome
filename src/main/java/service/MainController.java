@@ -1,5 +1,4 @@
 package service;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,4 +18,8 @@ public class MainController {
 		model.addAttribute("category", category);
 		return category;
 	}
+//	@GetMapping("/info/info/{category}")
+//	public String category(@PathVariable("category")String category, Model model) {
+//		model.addAttribute("category", category);
+//		return category
 }
