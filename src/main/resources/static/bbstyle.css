@@ -15,6 +15,10 @@ body {
     color: black;
     align-items: center;
 }
+
+.card{
+    margin: 20px;
+}
 /*.header {
     list-style: none;
     text-decoration: none;
