@@ -16,8 +16,11 @@ public class MainController {
 	@GetMapping("/info/{category}")
 	public String category(@PathVariable("category")String category, Model model) {
 		model.addAttribute("category", category);
-		return category;
-	}
+		return category;}
+
+	@GetMapping("/account/post")
+	public String post() {return "post";}
+
 //	@GetMapping("/info/info/{category}")
 //	public String category(@PathVariable("category")String category, Model model) {
 //		model.addAttribute("category", category);
