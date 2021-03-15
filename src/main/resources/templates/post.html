@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml">-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -9,44 +9,72 @@
 </head>
 <body>
 <div th:insert="home :: myHeader"></div>
-<!-- select category of post, upload image of post, title, description, tags >-->
+<!-- <form:form method="POST"
+          action="/account/post" modelAttribute="Scratch">
+   <table>
+       <tr>
+           <td><form:label path="title">Title</form:label></td>
+           <td><form:input path="title">Title</form:input></td>
+       </tr>
+       <tr>
+           <td><form:label path="description">Description</form:label></td>
+           <td><form:input path="description"/></td>
+       </tr>
+       <tr>
+           <td><form:label path="category"> Category </form:label></td>
+           <td><form:input path="category"/></td>
+       </tr>
+       <tr>
+           <td><form:label path="image"> Image </form:label></td>
+           <td><form:input path="image"/></td>
+       </tr>
+       <tr>
+           <td><input type="submit" value="Submit"/></td>
+       </tr>
+   </table>
+</form:form>
+ select category of post, upload image of post, title, description, tags >-->
+<form action="#" th:action="@{/post}" th:object="${post}" method="post">
 <div class = "row">
-    <div class = "col">
-<div class = "form-group">
-    <label for="exampleFormControlSelect1">select category</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-        <option>- select -</option>
-        <option>living room</option>
-        <option>kitchen</option>
-        <option>bathroom</option>
-        <option>bedroom</option>
-        <option>other</option>
-    </select>
+   <div class = "col">
+       <div class = "form-group" >
+           <label for="categorySelection">select category</label>
+           <select class="form-control" id="categorySelection" th:field="*{category}">
+               <option th:value="'other'" th:text="'- select -'"></option>
+               <option th:value = "'livingRoom'" th:text = "'living room'"></option>
+               <option th:value = "'kitchen'" th:text = "'kitchen'"></option>
+               <option th:value = "'bathroom'" th:text = "'bathroom'"></option>
+               <option th:value = "'bedroom'" th:text = "'bedroom'"></option>
+               <option th:value = "'other'" th:text = "'other'"></option>
+           </select>
+       </div>
+   </div>
+   <div class = "col">
+       <div class="form-group">
+           <label for="titleInput">title</label>
+           <textarea class="form-control" id="titleInput" rows="1" th:field="*{title}"></textarea>
+       </div>
+   </div>
 </div>
-    </div>
-    <div class = "col">
-<div class="form-group">
-    <label for="exampleFormControlTextarea1">title</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-</div>
-    </div></div>
 <div class = "row">
-    <div class = "col">
-<div class="form-group">
-    <label for="exampleFormControlFile1">upload images</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+   <div class = "col">
+       <div class="form-group">
+           <label for="imageInput">upload images</label>
+           <input type="file" class="form-control-file" id="imageInput" th:field="*{image}"/>
+       </div>
+   </div>
+   <div class = "col">
+       <div class="form-group">
+           <label for="descriptionInput">description</label>
+           <textarea class="form-control" id="descriptionInput" rows="3" th:field="*{description}"></textarea>
+       </div>
+   </div>
 </div>
-    </div>
-    <div class = "col">
-<div class="form-group">
-    <label for="exampleFormControlTextarea1">description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-</div>
-    </div></div>
 <div class = "buttonDiv">
-    <button type = "button" class = "button" onclick = "location.href = '/info/account';">
-        Submit
-    </button>
+   <button type = "submit" class = "button">
+       Submit
+   </button>
 </div>
+</form>
 </body>
 </html>
