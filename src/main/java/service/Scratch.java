@@ -14,6 +14,7 @@ public class Scratch {
     private String description;
     private String category;
     private String image;
+    private String username = "anonymous";
 
     public String getTitle()
     {
@@ -38,4 +39,6 @@ public class Scratch {
         return image;
     }
     public void setImage(String i) {this.image = i;}
+
+    public String getUsername(){return username;}
 }

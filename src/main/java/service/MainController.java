@@ -24,6 +24,8 @@ public class MainController {
 	@PostMapping("/post")
 	public String submitPost(@ModelAttribute Scratch post, Model model) {
 		model.addAttribute("post", post);
+		DatabaseConnection d = new DatabaseConnection();
+		d.saveData(post);
         System.out.println(post);
 		return "/account";
 	}
