@@ -10,11 +10,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
 public class Scratch {
+    private int id;
     private String title;
     private String description;
     private String category;
     private String image;
     private String username = "anonymous";
+
+    public int getID()
+    {
+        return id;
+    }
+    public void setID(int id)
+    {this.id = id;}
 
     public String getTitle()
     {
@@ -41,4 +49,7 @@ public class Scratch {
     public void setImage(String i) {this.image = i;}
 
     public String getUsername(){return username;}
+    public void setUsername(String u) {this.username = u;}
+
+
 }

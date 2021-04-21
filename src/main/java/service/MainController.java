@@ -3,8 +3,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @Controller
 public class MainController {
+	public ArrayList<Scratch> cardResults = new ArrayList<Scratch>();
 
 	@GetMapping("/")
 	public String home() {
@@ -27,6 +30,7 @@ public class MainController {
 		DatabaseConnection d = new DatabaseConnection();
 		d.saveData(post);
         System.out.println(post);
-		return "/account";
+        cardResults = d.callDatabase();
+		return "account";
 	}
 }
